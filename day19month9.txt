@@ -1,0 +1,8 @@
+﻿1. react小demo
+注释掉也能取到数据，why?
+允许跨域的时候为什么请求两次？
+
+
+
+cookie和session/localStrage的区别
+如何实现继承？prototype属性？

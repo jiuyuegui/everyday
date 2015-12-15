@@ -1,0 +1,8 @@
+1. javascript RegExp test 检测一个字符串是否匹配某个模式
+var a = "abcdefg";
+/^ab/.test(a);			//true【注意斜杠之间不要给字符串加引号，直接写就行】
+
+var b = new RegExp("ab"),
+    a = "abcdefg";
+b.test(a);				//true
+2. 正则表达式：[abcdefg]表示匹配中括号中的任意字符

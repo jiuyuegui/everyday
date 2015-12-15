@@ -1,0 +1,2 @@
+﻿1.  this.$paper_size = this._elm_dom_container.find("select[name=paper_size]").val(_globalInfo.paper_size);可以这样用的
+2. 

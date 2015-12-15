@@ -1,0 +1,1 @@
+﻿1. typeof x == "undefined" 而非undefined，即typeof出来是个字符串

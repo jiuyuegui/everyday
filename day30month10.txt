@@ -1,0 +1,2 @@
+1. 渲染html标签只需创建一个以小写字母开头的标签名
+2. react中使用className和htmlFor作为class和for的替代 

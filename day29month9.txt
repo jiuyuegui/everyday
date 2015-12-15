@@ -1,0 +1,4 @@
+﻿1. $.inArray(value, [], index);	//确定第一个参数在数组中的位置，从index开始，有则返回索引否则返回-1
+2. mousedown指针移动到元素上方并按下鼠标按键时
+    click指针动到元素上方按下鼠标按键并松开时
+3. var a = $().offset();  	//a.top, a.left分别是相对视口上左的偏移

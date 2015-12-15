@@ -1,0 +1,4 @@
+﻿1. $(selector).closest(parent,context);    example: $('li').closest('ul');//从当前元素向上查找直到找到【一个或零个】匹配的父元素【context参数表示遍历到该元素结束，可以提高查询效率】
+    $(selector).parent();    example: $('li').closest('ul');//从当前元素的父元素向上一层查找直到找到【一个或零个】匹配的父元素{注意：该方法只遍历一次父元素且从父元素开始查找，故选择器要注意写法}
+    $(selector).parents();    example: $('li').closest('ul');//从当前元素的父元素开始向上查找，找到【零个一个或多个】匹配的父元素{注意：该方法从父元素开始查找，故选择器要注意写法}
+2. JSON.parse(string);是将一个字符串转换为json对象，且string中的字段需要用双引号围起来

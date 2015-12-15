@@ -1,0 +1,5 @@
+﻿1. undefined == null;  
+    undefined != true && undefined != false;  
+    "" == false;  
+2. setTimeout(function(){ alert(1); }, 2000);
+3. 

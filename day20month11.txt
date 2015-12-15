@@ -1,0 +1,2 @@
+1. cursor: default;默认箭头
+cursor: auto;浏览器默认光标

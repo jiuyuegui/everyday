@@ -1,0 +1,4 @@
+1. world-break: normal【长英文字符串在ie6下会把容器撑开】/break-all【长英文字符串在火狐下不能换行】/keep-all【英文长字符串和中文长句在ie6下会撑开容器，在ie7,8下会直接溢出；长英文字符串在火狐下会溢出】;
+word-wrap: normal【长英文字符串在ie6下会把容器撑开】/break-word【所有浏览器都换行】;
+white-space: normal【长英文字符串在ie6下会把容器撑开】/pre【IE6下全部撑开，IE7、IE8、Firefox下全部溢出】/nowrap【IE6下全部撑开，IE7、IE8、Firefox下全部溢出】；
+2. 

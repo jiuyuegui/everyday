@@ -1,0 +1,14 @@
+1. htmlFilter: function(str) {
+		return typeof str === 'string' ? str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : '';
+	}
+过滤非法输入
+2. $('#id').get(0); 获得第一个匹配元素的名称和值，如：
+var a = $('#id').get(0); console.log(a.nodeName, a.innerHTML);
+3. 框架定义，用::分割字符串， 前面是事件名，后面是选择器，如
+"click::li.active": function() {
+	xxx;		//此为key,value形式
+}
+4. js中，target表示事件的承受者，currentTarget表示事件的监听者【响应者】，比如div中有个p，div有点击事件【监听】，当鼠标点击p时，e.target为p，而e.currentTarget为div
+target在事件流的目标阶段；currentTarget在事件流的捕获，目标及冒泡阶段。只有当事件流处在目标阶段的时候，两个的指向才是一样的， 而当处于捕获和冒泡阶段的时候，target指向被单击的对象而currentTarget指向当前事件活动的对象（一般为父级）。 
+5. [].slice.call(arguments)
+arguments可能是个伪数组，而只有数组才有slice方法，因此借助[]，argument能去用slice方法

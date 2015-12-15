@@ -1,0 +1,6 @@
+﻿1. $.param({"one":"hello", "two":"handsome"});	//one=hello&two=handsome 序列化key-value对象  
+2. serialize()和serializeArray()的区别
+   serialize()将表单数据字符串化，输出标准查询字符串a=1&b=2&c=3&d=4&e=5，用于ajax请求
+   serializeArray()将表单数据json化
+3. $().css();key值按正常style样式属性写，如margin-right
+4. 用marginRight的地方有：animate({paddingLeft: "110px"});以及document.body.backgroundColor

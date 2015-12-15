@@ -1,0 +1,14 @@
+﻿1. overflow: hidden【一般用于裁剪！】/float/position:absolute【把握好父元素】慎用
+2. float时最好指定width【浮动元素是需要一个宽度声明，不过可置换元素input,img,select等等除外；浮动元素的宽度总是趋向于零，因此最好给浮动元素声明一下width】
+3. 一般不要硬设高度和宽度，利用padding，margin，content将其撑起来
+4. float: left/right; display: inline;一起写是因为float在IE6下会有双边距问题，加上display: inline;即可
+5. 响应式手机应用一般用于信息类，交互少的情况下
+6. div容器（父元素）设置font-size: 0;子元素设置font-size可以解决一些容器之间的间隙问题
+7. display: inline-block; *display: inline;IE6/7不识别inline-block
+8. rowspan和colspan都是针对单元格(td)的，而<colgroup>标签中可定义<col>并且在col中定义对应列的宽度，对齐方式，颜色等
+9. ::after和::before用于清除浮动的时候需要设置
+div::after {
+	content: "";
+	display: table;
+	clear: both;
+}

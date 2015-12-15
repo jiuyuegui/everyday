@@ -1,0 +1,5 @@
+﻿1. checkout可用于创建分支和切换分支
+git branch a
+git checkout a
+可以合并成一个，git checkout -b a创建并切换分支
+2. 养成写测试的好习惯

@@ -1,0 +1,7 @@
+﻿1. clone下来的文件，在本地仓库为master，新建分支develop，切换到develop上修改bug，如果不进行commit就切换回master会发现git status后master里也有相应的修改，因为不commit就相当于改到本地仓库了，故在master下也会体现出来
+2. 一般fork一个项目A，A就会在自己的线上远端里；此时自己clone到本地仓库，进行修改，提交【提交到自己的线上项目A】，然后正式的A项目经过审核再合并自己的代码即可
+3. alert(a.b);	//报错，因为a在后面才定义
+    var a = {"a":"aa", "b":"bb"};
+4. 对象没有length或者obj[0]一说，会报错，能这样用的只有数组
+
+      

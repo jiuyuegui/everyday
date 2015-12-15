@@ -1,0 +1,9 @@
+1. git中的忽略文件的写法
+新建.gitignore
+exp: kkk/*	表示忽略kkk目录下的所有文件
+2. 命令行回退到修改之前：
+git checkout --kkk.js
+如果commit过了已添加到暂存区了则需要：git reset HEAD kkk.js
+3.  jquery可触发a标签的click()和trigger()事件但是无法使其发生跳转，因为a标签是具有默认行为的元素；
+	但是原生dom节点可以；
+4. ie在input框为disable的时候，不能复制其中的内容

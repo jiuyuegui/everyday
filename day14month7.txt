@@ -1,0 +1,10 @@
+﻿1. init和update的区别
+    init是页面一进去加载的，update是hash变化就会触发的
+2. IE下有时候margin-left/margin-right都不起作用，如果只是想要占位做空格则可用<span>display: inline-block;width设置即可
+3. juicer，将模板和json结合的引擎
+4. juicer(RC.template.get("template.common.trade_list.list", {}), this.common_list);	//速度快点
+    RC.template.get(this._data_template_name, this.common_list)
+5. JSON.parse(str);		//将字符串解析为JSON对象	str写法：'{"a": "c", "b": 2}' 单引号在括号外，双引号在括号内
+    JSON.stringify(obj);	//将对象解析为字符串		obj写法：a = {a: 1, b: 2}
+6. API.api_name({key: value, key: value}, $.proxy(function(json) {...}, this));	//注：value为数组须$.toJSON()转换
+7. 实现的功能最好在IE下测试多个版本，确保兼容性

@@ -1,0 +1,33 @@
+﻿1. if(typeof define === "function" && define.cmd) {
+	//有sea.js等CMD模块加载器存在
+}
+if(typeof define === "function" && define.amd) {
+	//有require.js等AMD模块加载器存在
+}
+2. JavaScript中的字符是用utf16编写的，而网页常用的是utf8或者gb2312。不涉及字符串的操作时，JavaScript编码和网页编码即使不一致也可以使用，但当涉及的时候，就要注意场景避免出错了，如：
+'1000' < '300'
+'5000' > '300'
+3. 本地向远程发送ajax请求，此时涉及到跨域问题，而实现跨域可以设置代理使用本地服务器去远端请求【代理是服务器与服务器之间的请求方式】
+代理：	A-----无法直接请求-----》B
+	正向代理	A-----请求-----C-----请求-----》B
+	反向代理   A-----无法通过任何方式请求-----》B
+4. 反向代理可以借助：node/jquery/apache
+5. seajs配置操作中，path中的路径用的是alias中的key，而alias中的key只能被path用，即
+// 别名配置
+  alias: {
+    'es5-safe': 'gallery/es5-safe/0.9.3/es5-safe',
+    'json': 'gallery/json/1.0.2/json',
+    'jquery': 'jquery/jquery/1.10.1/jquery'
+  },
+
+  // 路径配置
+  paths: {
+    'gallery': 'https://a.alipayobjects.com/gallery'
+  }
+
+
+
+
+
+
+

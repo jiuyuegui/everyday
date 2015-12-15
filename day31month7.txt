@@ -1,0 +1,1 @@
+﻿1.  jQuery中，attr()方法对应于属性，比如title，name，value等；而css()属性则对应样式，如display，width等

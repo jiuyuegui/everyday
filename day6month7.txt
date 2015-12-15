@@ -1,0 +1,8 @@
+﻿1. box-sizing: content-box/border-box/inherit
+平时默认为content-box,即设置元素的宽高=内容区的宽高，总体的宽高还要加上padding和border
+设置为border-box之后,设置元素的宽高=总宽高=padding+border+content
+2. letter-spacing: normal/length【可用于中文/可用于英文】
+word-spacing: normal/length【只用于英文单词】
+word-wrap: normal【浏览器默认】/break-word【在长单词或是URL地址内部换行】;
+word-break: normal【遵循浏览器换行规则】/break-all【允许在单词内换行】/keep-all【只能在半角空格或连字符处换行】;
+white-spacing: normal/pre【浏览器保留空白】/nowrap【文本不换行直到遇到<br>】/pre-wrap【保留空白符且正常换行】/pre-line【合并空白符保留换行符】

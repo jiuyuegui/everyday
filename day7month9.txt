@@ -1,0 +1,7 @@
+﻿1. 切换账号之后最好将fiddler中牵引的文件重新牵引，这样会快一点能测试
+2. 提交的时候：    
+    一： 去123，console，编译module_combine.min.js，编译压缩module.min.js
+    二： add , commit
+    三： pull, 改冲突
+    四： git push origin yuanyuan_merge
+3. 

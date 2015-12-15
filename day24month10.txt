@@ -1,0 +1,2 @@
+﻿1. jsx编译器会自动重写HTML标签为React.createElement(tagName)表达式，其余什么都不做，这样可以避免命名空间污染，否则自定义的<DIV />和<div>均会当成react组件去执行render方法，会产生错误
+2. 

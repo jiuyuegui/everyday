@@ -1,0 +1,36 @@
+﻿1. switch语句里一定要写break...
+2. var a = {
+	'a': 'hello',
+	'b': 'world',
+	'c': {
+		0: {
+			'aa': 'aa'
+		},
+		1: {
+			'aa': 'bb'
+		},
+		2: {
+			'aa': 'aa',
+            'xx': 'xx'
+		}
+	}
+};
+var b = [];
+for(var i in a['c']){
+  if(a['c'][i].aa == "aa") {
+    b.push(a['c'][i]);
+    console.log(a['c'][i]);	//Object {aa: "aa"}和Object {aa: "aa", xx: "xx"}
+    console.log(b);		//[Object]【0: Object, 1: Object】和[Object, Object]【0: Object, 1: Object】包含的对象等价，因为对象在打印时会以最终状态显示
+  }
+}
+3. 
+
+
+
+
+
+
+
+
+
+4. 使用git上传总结、创建vpn 

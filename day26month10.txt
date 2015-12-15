@@ -1,0 +1,19 @@
+﻿1. 获取select change之前的option的value
+$(document).ready(function() {
+  var a;
+  $('select#web').on('focus', function() {
+    a = this.value;	//焦点值
+}).change(function() {
+  	console.log(a);
+  	a = this.value; //改变之后的值
+	});
+});
+或经过框架封装后无法直接取到value时
+$('select#web').on('focus', function() {
+    a = $(this).find('option:selected').val();	
+}).change(function() {
+  	console.log(a);
+  	a = $(this).find('option:selected').val(); 
+	});
+});
+2. keypress事件不能得到所有的keycode，如功能键F9，而keydown能得到

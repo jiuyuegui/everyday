@@ -1,0 +1,2 @@
+﻿1. jquery里没有innerHTML,只有html()
+2. jquery里prop适用于标签固有属性，而attr适用于自定义属性

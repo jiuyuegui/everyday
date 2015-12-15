@@ -1,0 +1,9 @@
+﻿1. IE访问Apache慢的问题
+在配置文件httpd.config文件中加上
+AcceptFilter http none
+AcceptFilter https none
+2. 在js中字符串用单引号较好，以方便字符串中的双引号情况
+3. \'\' 是''(空字符串)		而\''是""(双引号)
+4. <header>标签中不要写script，会使得script的src不能直接点击
+5. act-if-loop="a != undefined act-then b in a"表示如果a部位undefined,则做循环
+6. act-if-loop一般嵌套在act-loop中，当然也可能没有嵌套，但是要明确a来自哪里

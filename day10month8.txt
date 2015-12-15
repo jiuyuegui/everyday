@@ -1,0 +1,8 @@
+﻿1. Math.floor向下舍入为最接近的整数
+    Math.round按正常四舍五入计算
+    Math.ceil向上舍入为最接近的整数
+2. 版本更新：若检测到线上版本号小于服务器版本号则进行更新
+3. 	a();	//undefined
+	var a = function() {console.log(2);};
+	b();	//1
+	function d() {console.log(1);}

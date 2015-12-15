@@ -1,0 +1,6 @@
+﻿1. wlb: [];
+_fn: function(cp) {
+    var re = this.wlb || [];    //虽然上面定义了wlb但若函数执行顺序先调用了fn，则此时wlb还是undefined，故需要判断
+}
+2. 对象没有length属性！！！即console.log(Obj.length); //undefined
+3. jquery的data自定义属性取到之后，给其赋值，但是页面上表现的仍是原来的值

@@ -1,0 +1,2 @@
+1. each()方法内部return不起作用，break会报错
+2. IE7会在表单提交的时候将表单input中若有placeholder属性且text中未填入值，则会被作为value提交到后台

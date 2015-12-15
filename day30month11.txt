@@ -1,0 +1,5 @@
+1. list-style-type: disc/circle/square/decimal/lower-alpha/upper-alpha/none/armenian/cjk-ideographic
+2. list-style: disc inside/outside url(img.jpg);
+3. $().get(0);		//获取匹配的第1个元素，如有两个p，则为获取第一个p
+4. fieldset>legend	//很有用的图文框
+5. $().remove();	//删除文档中的元素，但是jquery对象中的元素仍然存在

@@ -1,0 +1,7 @@
+﻿1. git push origin --delete xxx用于本地删除远程分支
+2. git merge request会检测是否此次和上次有所不同，若没有不同之处则不会允许再次merge request
+3. nodejs的版本有4.xx和0.xx这是因为node版本是由多人一起开发的，不同的分支合并产生了不同的版本以及命名
+4. x86指32位操作系统
+5. js回退一页，返回上一页代码，返回下一页，返回第几页
+history.go(-1), history.back(), window.history.forward(), window.history.go(x/url)
+6. 

@@ -1,0 +1,3 @@
+﻿1. (a || b || c) != ((a || b) || c)前者顺序上可能会乱掉，后者表示先看a或b是否存在
+2. var time = setTimeout(function(){…clearTimeout(time);…});会在内存中占资源，因此只使用一次后应删掉，语句放哪都可以
+3. 

@@ -1,0 +1,23 @@
+﻿1. $('div').data('name');
+    用于取得data-属性的值，即<div data-name="123"></div>
+    $('div').data('cityProvince');
+    用于取得data-属性的值，即<div data-city-province="xian"></div>
+2. $('div').toggleClass('change');
+    表示在某个特定条件下检测div有没有change类，如果有就删掉否则加上
+    $('div').toggleClass('on').toggleClass('off');
+    表示在特定条件下会需要两种样式，检测有on就删掉(但是还要应用上off的样式)否则删掉off(应用上on的样式)
+3. $('a').closest('.haha');
+    表示逐级(包括a本身)向上找到距离a最近的.haha所在节点
+4. $.inArray(value, arr);
+    查找value在arr中的位置，没有则返回-1；但是注意引用类型的值，如
+    var a = {a: 1};
+var b = {a: 1};
+console.log(a == b);	//false，因为a,b指向不同的对象
+    var a = {a: 1};
+var b = a;
+console.log(a == b);	//true，a.b指向同一个对象
+5. array.concat(item1, item2,...);
+    item可以是字符串，对象，数组
+6. IP地址10是测试机的
+7. $(selector).is(":checked"/"form");
+    根据选择器,元素,jQuery对象来检测匹配元素集合，如果这些元素中至少有一个元素匹配给定的参数，则返回true

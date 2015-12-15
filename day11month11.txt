@@ -1,0 +1,4 @@
+1. +type - 1表示先将type转化为数字再减一
+2. var a = $('<div id="trade_list" />').appendTo(this._data_dom_root);
+此时，a是#trade_list的节点
+3. each()里用return相当于for里的break

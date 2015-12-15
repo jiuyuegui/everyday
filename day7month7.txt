@@ -1,0 +1,30 @@
+﻿1. 公司项目-页面模块化，在一个项目中有
+module
+里面是不同的文件夹，一个文件夹表示一个页面
+文件夹中有模板和操作---（即container，包括module.js和template.js  +  header，包括module.js和template.js）
+
+conf
+里面是route.conf.js，在里面配置路由，路由会默认开始在module里面查找相应页面，此外还可在路由中进行相关配置和操作，如定义title等
+
+fe_bootstrap.js
+里面定义了所有js的数组，包括框架、路由、控制器、模板、模块等，然后进行逐个加载
+
+resource
+里面是各个页面需要的css/img/js【这些js一般用于操作DOM，做些特效等；而module.js一般用于与数据库互动和数据与模板结合】
+
+framework
+里面是公司内部框架，接口等
+
+controls
+
+mock_ajax
+
+项目
+里面又有module……
+
+2. 有时把js文件放在<head>里更有效率，因为有些项目涉及到对DOM的渲染，而如果放在后面则会导致DOM迟迟加载不出来，尤其是spa页面
+3. 高度适屏的设置
+可以用css3新属性，vh/vw/vmin/vmax-----------兼容性
+可以给body和html设置高度100%，然后就可以设置
+4. seed是用koala@important进行压缩的
+5. 自己写的代码不太易读的要加上注释

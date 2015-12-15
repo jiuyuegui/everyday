@@ -1,0 +1,11 @@
+1. js中return，return false，return true的区别
+return: 返回null，中断方法的执行效果，即后面的方法不会执行下去，但是不会阻止默认动作如表单提交【控制权返回给页面】；
+return false: 取消默认动作，中断事件处理函数，只在当前函数有效不影响别的外部函数；
+return true: 返回正确的处理结果，相当于继续执行；
+2. test.html里x和y必须是函数表达式的方式吗？写成标准的函数就会报错？
+3. 表单提交的时候type="submit"的onclick return false就不会继续执行onsubmit;同样，onsubmit return false就不会将表单提交出去；即
+<form onsubmit="return a()">	//函数a返回false
+  <input type="text" />
+  <input type="submit" onclick="return b()" />		//函数b返回false
+</form>
+4. 

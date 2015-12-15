@@ -1,0 +1,2 @@
+1. string.toUpperCase();大写方法
+2. 

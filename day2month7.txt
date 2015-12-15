@@ -1,0 +1,11 @@
+﻿1. css
+word-spacing: 单词之间空格的距离(对中文无效) normal/length
+letter-spacing: 字母与字母之间的距离 nomal/length
+2. <b>标签不支持rotate
+3. div+css两列高度自适应
+左边的div设置样式为	float:left;/width:25%;
+右边的div设置样式为	margin-bottom:-10000px;/padding-bottom:10000px;/_float:left;/overflow:hidden;
+4. container高度自适应
+由于子元素高度取决于父元素，因此，在设置之前需要设置html,body的高度为100%，然后设置container的高度100%即可
+5.background: #fff url(logo.png) fixed top left;
+其中，不要把background写成background-image;fixed是background-attachment;top left分别表示x,y轴的位置，若不写则认为是center

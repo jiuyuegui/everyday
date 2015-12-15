@@ -1,0 +1,13 @@
+﻿1. 代码提交步骤：
+	1. clone 线上项目【可能有很多分支如master，yuanyuan_merge，develop等】
+	2. 本地checkout到yuanyuan_merge 
+	3. git branch feature【或者别的，可以叫feature，issue等】
+	4. 各种修改之后，add,commit【产品没说发布也可以先用pull，然后git push origin feature(新创建的bug节点)】
+	5. git checkout yuanyuan_merge
+	6. git merge --no-ff feature【当产品说要上线的时候可以进行接下来的步骤】
+	7. git pull
+	8. git push origin yuanyuan_merge【若报错，则再次将module_combine.js编译和module.js编译压缩，继续4,7,8】
+	9. 提交【删除分支feature，下次修改继续新建分支】
+2. 可以从卖家后台进入群里用户的环境，找到相应的订单等进行查看
+3. git pull 不指定分支的话只更新当前分支
+4. git log  --graph --oneline可以查看图形化log

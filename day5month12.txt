@@ -1,0 +1,7 @@
+要问的：
+1. 交易首页所有renderFn都会渲染吗？导航问题怎么破？打单页渲染时多次刷新问题？打单页刷新跑到交易管理模块下的问题？
+==>因为没写depend依赖关系，但是只有组模块才需要basic以及depend
+pages::hashchange事件是不是全局的，别人也发布一个会不会混了？
+不会的，它只会在当前模块下
+2. pagesModify不起作用？
+==>用pagesModifyUrl试试，再去找找框架console

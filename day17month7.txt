@@ -1,0 +1,2 @@
+﻿1. serializeArray()&serialize()方法
+serializeArray()是将表单序列化为json对象，而serialize()则是将表单序列化为字符串，jQuery方法

@@ -1,0 +1,31 @@
+1. jquery没有提供类似innerHTML/outerHTML的属性或方法，$().html();<==>innerHTML，而outerHTML则可以通过$().prop('outerHTML')来获取;
+2. jsonp：在发送ajax请求的时候，用src发请求，请求某个url，并传递一个回调函数名过去，一旦数据返回即可执行该回调函数。exap:
+$.ajax({
+	type: "get",
+	async: false,
+	url: "http://xxx.aspx",
+	dataType: "jsonp",
+	jsonp: "callback1", //用以获得jsonp回调函数名的参数名(一般默认为:callback)
+	jsonpCallback: "flightHandler", //回调函数名[默认为随机函数名也可写"?"，jQuery会自动处理数据]
+	success: function(json) {
+		console.log(json[0]);
+	},
+	error: function() {
+		alert('fail');
+	}
+
+});
+
+3. node做服务器运行本地文件；原理：【本机：别人不能访问/内网/公网】绑定一下host将内网ip对应的域名换到项目对应的域名下，这样我们访问该域名的时候实际访问的是自己的ip地址下的资源，启动一个node服务器端口为80【默认端口】，即可使得访问某域名时资源来自本地；
+4. encodeURI,encodeURIComponent()------------------decodeURI,decodeURIComponent
+背景：是用来对URI（RFC-2396）字符串进行编码的全局函数
+相关知识：
+	a:	保留字符 ; | / | ? | : | @ | & | = | + | , | $ 
+	b:  Mark字符 - | _ | ! | . | ~ | * | "" | |【一竖】
+	c:  基本字符 所有大小写字母和数字
+用法：
+	i:  encodeURI是对所以非a,b,c的字符进行转义编码，常用于对完整的URI字符串【协议,主机名,路径或查询字符串等参数部分】进行编码处理
+	ii: encodeURIComponent是对包括保留字符在内的也进行转义编码，常用于对URI中的一部分进行编码【用于分隔 URI 各个部分的标点符号】
+场景：
+	http://www.mysite.com/send-to-friend.aspx?url=http://www.mysite.com/product.html
+	在这个URI字符串中。send-to-friend.aspx页面会创建HTML格式的邮件内容，里面会包含一个链接，这个链接的地址就是上面URI字符串中的url值。显然上面的url值是URI中的一个部分，里面包含了URI保留关键字符。我们必须调用encodeURIComponent对它进行编码后使用，否则上面的URI字符串会被浏览器认为是一个无效的URI。

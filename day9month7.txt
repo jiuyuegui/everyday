@@ -1,0 +1,28 @@
+﻿1. jQuery为开发插件提供了两个方法jQuery.extend(object); jQuery.fn.extend(object);
+其中，fn表示给jQuery对象添加方法，而jQuery.extend表示扩展类本身，为类添加新方法
+2. $.extend方法
+可用于给jQuery添加静态方法$.extend({fun1: function(){}, fun1: function(){}, ...});
+$.extend({
+	add: function(a,b){return a+b;},
+	minus: function(a,b){return a-b;},
+	multiply: function(a,b){return a*b;},
+	divide: function(a,b){return a/b;}
+});
+var sum = $.add(3,5) + $.(3,5) + $.(3,5) + $.(3,5);	//21
+合并多个对象$.extend(obj1, obj2, obj3..);
+var Css1 = {size: "10px", style: "ox"}	
+var Css2 = {size: "12px", style: "ox", weight: "thin"}
+$.extend(Css1, Css2);	//Css1 = {size: "12px", style: "ox", weight: "thin"}
+深度嵌套对象$.extend(obj1, obj2, obj3..);
+var P1 = {name: "zyy", locaion: {city: "hangzhou"}}
+var P2 = {last: "zhang", locaion: {state: "ZJ"}}
+$.extend(true, P1, P2);	//P1 = {name: "zyy", last: "zhang", location:{city: "hangzhou', state: "ZJ"}}
+3. 绑定事件方法$(selector).on(event, childSelector, data, function, map);
+event是事件"mouseover"，字符串，可以绑定多个事件到同一个函数"mouseover mouseout"，也可以绑定多个事件到不同的函数on({mouseover: function(){...},mouseout: function(0{...}});，还可绑定自定义事件"myFunction'；
+childSelector是子元素，被绑定对象，若为null，则绑定在$(selector)上，另外还可以是未创建的元素；
+data是要传递到函数中的数据；
+若要移除on()绑定的方法，可以使用off()给绑定对象解绑【若只需一次操作，则可使用one()方法】
+4. 建立稳定的上下文环境$.proxy();
+$.proxy(function, obj);有时，function在特定情况下对应的obj不是期望的obj，使用该函数可使obj在function环境中不发生变化
+5. console.log("123" + json);	//结果会将json对象转为字符串，即打印123 [object object]
+6. 

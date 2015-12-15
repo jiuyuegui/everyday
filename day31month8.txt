@@ -1,0 +1,9 @@
+﻿1. 一般localStorage若是随时可能更新的，则使用的时候不要在某个地方一下子定义成var s = JSON.parse(localStorage.getItem('xx'));否则用数据的时候可能用不到最新的
+2. 计算机中，parseFloat后大数加一个很小的数会产生误差，结果小数点后会多出来很多9，故一般要记得用toFixed(num);
+3. 引用类型的数据最好分别定义，否则会产生混淆，如：
+var a = b = [];
+a.push('aa');
+b.push({'bb':'cc'});
+console.log(b);		//['aa', {'bb':'cc'}]
+
+

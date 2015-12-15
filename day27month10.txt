@@ -1,0 +1,4 @@
+1. react组件里可用url发请求，如<CommentBox url="../xx/comments.json" />直接在webpack提供的服务器上请求数据，故不涉及跨域问题，从而可在项目中新建json文件，但要注意路径！CommentBox组件是编译压缩后由页面调用进而发出url请求的，所以该url是相对于index.html的路径
+2. function() {}.bind(this)可将this传递到匿名函数中而不改变上下文环境
+3. 浏览器有很多默认的属性方法，一般涉及到页面上的操作，如拖拽，提交表单等都要加上e.preventDefault()
+4. 

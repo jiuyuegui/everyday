@@ -1,0 +1,12 @@
+1. js文件变化的时候才会触发webpack的自动刷新，因为config里写得很清楚；css的变化会被实时更新压缩但需要手动刷新
+2. 不同的操作系统在处理行尾结束符采取了不同的处理方法
+		如CRLF:Carriage Return Line Feed回车换行，LF:Line Feed换行，CR:回车
+			CRLF->Windows-style
+			LF->Unix Style
+			CR->Mac Style
+在Git通过下面的命令配置
+$git config --global core.autocrlf true/false
+3. display: flex;
+justify-content: center;
+top center;	背景图片就居中了
+4. 

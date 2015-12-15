@@ -1,0 +1,12 @@
+1. 子元素居中，可用text-align: center;又是限于自身宽度再加上width: 50%;
+2. Math.floor: 向下舍入
+   Math.ceil: 向上舍入
+   Math.round: 舍入距离自己最近的整数
+   Math.random: 返回0~1之间的整数
+3. e.target: 事件承受者
+   e.currentTarget: 事件监听者
+   e.srcElement: IE中的事件对象
+4. git merge --abort								将上次的merge回退
+   git checkout -b master origin/master				将线上的master拉到本地
+   git push origin --tags							将本地tag推送到线上
+5.  

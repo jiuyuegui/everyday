@@ -1,0 +1,14 @@
+1. 领到任务时要问清楚分别都是什么时候上线，如果几部分不同时上线要多建几个分支分别开发
+2. 以后再处理后台数据时要把每一种情况考虑到，要有候补代码，很多时候返回的字段会为空为undefined
+3. gitlab上有时会有合并冲突的情况，此时需要手动合并
+git fetch http://xxx.git develop	[需要发出请求的人输入用户名密码]
+git checkout -b xxx-develop FETCH_HEAD
+git checkout develop
+git merge --no-ff xxx-develop [解决冲突]
+git add.--commit 
+git push origin develop
+4. React.render()时，第二个参数必须是dom节点而非jquery节点
+5. git stash		//暂存当前正在进行的工作【如想pull最新的代码但又不想加新的或修复一个紧急的bug回到上一个commit,该单词意为消失藏匿】
+   git stash pop	//完成一些工作后，回到该状态，pop意为出现
+6. git blame xxx	//可以查看是谁修改了某文件
+7. 

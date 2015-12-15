@@ -1,0 +1,9 @@
+﻿1. 双向绑定：如angularJs，表示在页面上可以读写，不用自己操作DOM，可获取写入的值存在model里，也可读取module里的值显示在页面上
+    单向绑定：如reactJs，在页面上只能写【或只能读】
+2. 匿名函数自动执行：可以创建命名空间，只要把代码都写在这个特殊的函数包装内，外部就不能访问除非在变量前加window，写法如下
+	(function() {……})();	<==>		(function() {……}());
+	!function() {……}();		<==>		~function() {……}();
+	-function() {……}();	<==>		+function() {……}();
+3. $.cookie是在jquery.cookie.js插件里才有的，其中，$.cookie(key, value);value只能是具体的值，不能是function；而这个所谓的具体值通常是字符串，对象一般是序列化后才能存入cookie，而取的时候要反序列才又能得到对象
+   $.cookie()不传值的时候取的是该页面所有的cookie
+   $.cookie(),必须在有域名的页面才能存取；说大点，浏览器的客户端标识不同的cookie都是以domain, path, name来唯一标识的

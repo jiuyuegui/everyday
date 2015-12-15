@@ -1,0 +1,5 @@
+1. jquery的closest(selector)方法必须有参数！ 
+2. jQuery的nextAll()方法
+    $('div:first').nextAll('some');	//注意：sameDiv是和第一个div同级的节点，但不一定是div节点
+3. 经过封装的原生表单元素在操作dom时可能会选不中，这时候要去选择外层的封装
+

@@ -1,0 +1,2 @@
+1. 框架中已经进行了json的stringify和parse，因此不再需要
+2. 

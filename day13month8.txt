@@ -1,0 +1,43 @@
+﻿1. 提交git代码的时候可以用ssh验证的方式提交，从而不用输入用户名密码，即
+首先测试是否设置好ssh -T git@gitcafe.com
+提示Hi xxxxxx! You've successfully...就可以用啦
+$ git remote add origin ssh://git@dev.lemote.com/rt4ls.git
+2. css-font
+语法：
+font : font-style || font-variant || font-weight || font-size || line-height || font-family
+font : caption | icon | menu | message-box | small-caption | status-bar 
+取值：
+font-style  :normal | italic | oblique 
+font-variant  : normal | small-caps 
+font-weight:normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 
+caption  :  CSS2  使用有标题的系统控件的文本字体(如按钮，菜单等) 
+icon  :  CSS2  使用图标标签的字体 
+menu  :  CSS2  使用菜单的字体 
+message-box  :  CSS2  使用信息对话框的文本字体 
+small-caption  :  CSS2  使用小控件的字体 
+status-bar  :  CSS2  使用窗口状态栏的字体 
+示例：
+p { font: italic small-caps 600 12pts/18pts Courier; } 
+3. string.replace(RegExp, function(){
+	return 123;
+});
+如function a(string){
+  
+   return (""+string).replace(/[asdf]/g, function(){
+    
+	return 123;
+  });
+
+   }
+   
+a('assdd');
+	//"123123123123123"
+function a(string){
+   return (""+string).replace(/[asdf]/g, function(match){
+    	return {'a':'aa','s':'ss','d':'dd','f':'ff'}[match];
+   });
+}
+a('assdd');	//"aassssdddd"	
+即如果字符串string中有匹配到的值，则将每一个匹配到的值都用后面的字符串（或回调函数）替换掉
+
+

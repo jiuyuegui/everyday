@@ -1,0 +1,2 @@
+﻿1. 代码结构要可读性高，对于查错查找会很方便
+2. $.when(request1,request2,request3...).done(function(a1,a2,a3...){});

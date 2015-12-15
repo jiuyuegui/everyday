@@ -1,0 +1,14 @@
+﻿1. 线上测试版本变化的时候首先在Network里将请求的ip地址找到，然后加到hosts文件中，这样就不会出现502错误
+2. 在mdul中，name是【最外层.当前页面名】，如wlb.trade_list；
+	     depend是最外层名，如wlb；
+	     _data_dom_root则是模块要插入的位置的外层id名，如<div id="fhgl-main_wrap"></div>；
+	     _data_template_name是当前页面模板的名字，如template.wlb.check_old_order
+3. $.isEmptyObject(obj)
+用于判断obj是否为空对象，若是，返回true；否则，返回false
+4. hashs表示hash对象，指的是location的hash属性，即url[http://www.baidu.com/index.html#/pages/hello_world]中#/pages/hello_world
+    pageSize是每页显示多少条记录
+    pageNo是显示第几页
+5. RC.sub(name, callback, context)--返回的是-->this.event.sub(name, callback, context)--返回-->this；
+    是一种设计模式，主题/观察者模式，主要用于不同模块间的相互调用；即name为唯一标识名，callback是context里的方法；
+    sub表示订阅callback方法，订阅后一旦pub推送了name标识名就会自动执行callback方法；一般写在event-bind里
+6. jqm----jQuery mobile

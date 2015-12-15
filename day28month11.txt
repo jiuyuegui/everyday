@@ -1,0 +1,1 @@
+1. 最好用$.extents(true, {}, kkk, xxx);来将xxx的数据复制到kkk，因为引用型数据会影响其他的

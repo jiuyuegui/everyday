@@ -1,0 +1,3 @@
+1. 模板中对象的数据形式还可以是act-if="data:length != 0"
+2. tab窗口切换可以用<href="#one" + data-toggle="tab"> + <class="tab-content"> + <id="one">完成
+3. 

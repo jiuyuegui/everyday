@@ -1,0 +1,2 @@
+﻿1. cookie设置path为/时可以跨端口，但是localStorage不能跨域
+2. 

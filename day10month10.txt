@@ -1,0 +1,4 @@
+﻿1. div绝对定位后，若设置bottom的值，则该div的高度从top到bottom所设置的值，即改变top的时候，div会被拉长或缩小
+2. jquery方法检测是否某节点是隐藏的
+$().is(':hidden'); 或 $().is(':visible');若该节点不存在则均会报false
+3. 

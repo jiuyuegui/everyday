@@ -1,0 +1,5 @@
+1. react中state和props
+state可以用getInitialState【初始化】和setState去设置；props可以通过getDefaultProps【初始化】和父组件去设置
+2. react是在服务器端渲染的，而传统的客户端渲染的速度是很慢的
+3. react遵从单一功能原则，一个组件只解决一个功能因此只维护一个状态state，可以有多个props
+4. 

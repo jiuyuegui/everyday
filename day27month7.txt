@@ -1,0 +1,16 @@
+﻿1. js函数功能单一化好处：
+修改不影响其余功能以及该功能可能被公用
+2. http的状态码为302可能是发生了跨域请求
+3. 公司框架之弹窗
+$.dialog({
+                                title: "警告",
+                                content:"1",
+                                ok: function(){
+                                    console.log(1);
+                                },
+                                okVal: "确定",
+                                cancel: function(){
+
+                                },
+                                cancelVal: "取消"
+});

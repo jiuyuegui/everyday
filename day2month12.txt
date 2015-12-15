@@ -1,0 +1,2 @@
+1. node启动的项目中，域名和ip在host绑定好了，但是某些时候并不能对等
+2. tatami框架中，view主要用于展现视图不涉及与后台的交互，每个template中都有一个getMain()方法

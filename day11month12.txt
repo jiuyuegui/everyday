@@ -1,0 +1,4 @@
+1. $.inArray(a, ['a', b]);
+如果a是数字，而'a'是字符串，他们是不能匹配上的
+2. substr(start, length);
+3. 

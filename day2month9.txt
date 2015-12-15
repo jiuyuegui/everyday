@@ -1,0 +1,2 @@
+﻿1. 使用icheck组件，记住，监听input用ifClicked, 改变状态用icheck
+2. prop('xx')属性必须传值进去，否则会报错

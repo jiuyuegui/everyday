@@ -1,0 +1,20 @@
+﻿1. 异步加载没有return，因此往往传入一个callback使得异步加载取得的数据能够访问?
+   假如var result = 0;
+        var asyn = function(a) {
+             var b;
+	result = b + 1;
+        }	
+        asyn(1);
+        console.log(result);	//0 
+   解决asyn(1, callback) {}
+2. hashs在公司框架中被封装为一个对象，具有当前模块名称等属性，例如：
+app: "check_old_order"
+pageSize: "10"
+root: "wlb"
+sortField: "created"
+sortOrder: "asc"
+……
+在每个页面一打开时，它的hashs已经确定了，若在一个页面打开的时候需要某些参数，则可以在该页面对应的链接(url)处加上需要的参数，如：
+location.hash = "/wlb/design/?kdCode=" + _cpCode;
+3. 命名_ctrl_表示操作DOM的函数
+4. 未打印的订单，点击按钮后，一直关掉打印选项，并未打印，不刷新页面，此时快递单显示为已打印(console里)

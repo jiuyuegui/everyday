@@ -1,0 +1,37 @@
+﻿1. javascript中Array.slice(start,end);
+start指初始位置，为正从左到右从0开始索引，为负从右到左从-1开始索引
+end指结束位置后一位(即不占选取位)，为正从左到右从0开始索引，为负从右到左从-1开始索引
+该操作不改变原数组，而是返回修改后的数组
+字符串和数组均有该方法
+2. javascript中Array.splice(index,howmany,item1,item2,...);
+index指初始位置，为正从左到右从0开始索引，为负从右到左从-1开始索引
+howmany指要删除的数量，任何时候均为从左到右数
+item指要插入的项，从删除位置处插入
+该操作改变原数组
+数组才有该方法
+3. Array.prototype.slice.call(arguments);  能将具有length属性的对象转换成数组
+转换成数组的通用函数
+var toArray = function(s){
+      try{
+         return Array.prototype.slice.call(s);
+     } catch(e){
+             var arr = [];
+             for(var i = 0,len = s.length; i < len; i++){
+                 //arr.push(s[i]);
+                 arr[i] = s[i];  //据说这样比push快
+             }
+              return arr;
+    }
+}
+Array.prototype.slice.call(arguments);
+首先，为什么用call，因为arguments不能使用slice()，而call可切换上下文环境，使得slice()方法指向arguments对象的作用域
+其次，为什么用Array.prototype.，因为几乎所有的js方法都是通过prototype扩充的，而slice正是Array的原型方法
+4. js中的方法调用有三种，对象方法/类方法/原型方法
+对象方法对象的实例可以使用
+类方法只有类自己可以调用
+原型方法会形成作用链，作用链上的对象均可使用
+5. 使用构造函数new出来的函数没有prototype属性
+直接声明的函数具有prototype属性
+6. 某些按钮是跳转页面的，这几牵扯到了hsah和不同页面间的转换而非单纯的点击操作
+7. 今天
+关于功能列表上的打印发货这一块的url后面【按钮urlpath】我没有配置参数，之前说都是get方法，但参数是标识页面的【从那个页面点击来 / 点到那个页面去】，听王纯说现在没那个需求，故不写参数

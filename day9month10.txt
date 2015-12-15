@@ -1,0 +1,5 @@
+﻿1. a = 12.0387646;
+    a.toFixed(2);
+    console.log(a);	//12.0387646
+应该a = a.toFixed(2);
+2. 

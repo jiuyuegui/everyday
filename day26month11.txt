@@ -1,0 +1,5 @@
+1. js delete
+a: delete可以删除对象中的属性	----	var obj = {a: 12, b: 34}; delete obj.a; console.log//{b: 34};
+b: delete不能删除变量	----	var a = 123; delete a; console.log//123;
+c: delete删除不了原型链中的变量		----	fun.prototype.age = 18; delete obj.age; console.log//18；	
+2. 

@@ -1,0 +1,9 @@
+﻿1.icheck方法
+    $('input').iCheck('check'); 将输入框的状态设置为checked
+    $('input').iCheck('uncheck'); 移除 checked 状态
+    $('input').iCheck('toggle/disable/enable/update/destroy'); toggle checked state/将输入框的状态设置为 disabled/移除 disabled 状态/apply input changes, which were done outside the plugin/ 移除iCheck样式
+2. icheck事件
+    ifClicked/ifChanged/ifUnchecked/ifDisabled/ifEnabled/ifCreated/ifDestroyed
+    点击、状态变化、选中、变为未选中、变不可用、变为可用、应用了iCheck样式、移除了iCheck样式
+3. $().find('input[name=""][value=""]');
+    $().find('input[name=""]:eq(0)');

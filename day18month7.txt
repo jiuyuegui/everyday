@@ -1,0 +1,22 @@
+﻿1. axure——可视化快速原型开发工具
+2. eval(s)----javascript方法
+eval函数接受一个参数s，若s不是字符串则直接返回，否则执行s语句；var code1 = '"a"+2';alert(eval(code1));	//'a2'
+
+特别声明，s若是对象语法"{……}"类型，需要用括号括起来；var code2 = '{a:2}';alert(eval('('+code2+')'));	//[object object]
+
+eval函数总是在调用它的上下文空间内执行，如：
+var s = 'function test(){return 1;}';
+function demo2(){
+eval(s);
+}
+demo2();
+alert(test());	//error:test is not defined,因为test在局部空间内定义，demo2内可以访问
+实际的ajax开发中，有时会需要从服务器动态获取代码来执行以减轻一次载入代码过多的问题，或某些代码通过JavaScript自身生成，希望用eval()函数使其执行，但这样的代码一般在函数内完成
+
+注意：alert(eval == window.eval);	//true,但eval仍然在上下文环境（可能是局部）中执行
+
+eval解析json字符串和json.stringify的区别在于，eval还可以计算代码，且某些木马置于其中会很危险
+3. js中!!用法
+var o = {flag: true};	var test = !!o.flag; <==> var test = o.flag || false;
+即若o中存在flag则返回对应值，否则返回false【而非null/undefined】，作用就是将结果转化为boolean值
+4. 
