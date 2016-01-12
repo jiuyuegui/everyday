@@ -1,0 +1,3 @@
+1. trigger不起作用的时候可以用触发dom节点的方式处理，如$('a')[0].trigger();
+2. clone项目--npm install grunt-cli -g--npm install--grunt --env=test
+3. 问清楚需求！！！

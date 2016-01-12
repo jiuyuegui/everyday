@@ -1,0 +1,4 @@
+1. jquery判断checked
+.is(':checked')
+2. javascript:history.go(-1/-2/……);   回退任意页
+   javascript:history.back();					回退一页

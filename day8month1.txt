@@ -1,0 +1,14 @@
+1. 回调函数里的call,this
+function a(callback) {
+
+	$.ajax({
+		url……
+		……
+		success: function(data) {
+			callback.call(this, data);
+		}
+	});
+}
+a(function(data) {
+  this.kkk();
+});

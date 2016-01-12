@@ -1,0 +1,5 @@
+1. 执行npm install命令安装项目依赖的库
+2. underscore模板如果一开始就写成_.template(temp, value);的形式，则会直接渲染；分开些方便用的时候执行
+3. var a = $('#kkk').html();
+   var b = _.template(a);	//此时才是underscore模板对象
+   b({……});

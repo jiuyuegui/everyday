@@ -1,0 +1,15 @@
+1. 一个具有prototype的方法的实例才能找到this
+function Person() {
+	console.log(this);
+	this.init();
+}
+Person.prototype = {
+	init: function() {
+		console.log(123);
+	}
+}
+Person();	//无法使用init方法，this为window
+
+var son = new Person();
+son.init();	//可以使用,此时son是一个实例对象
+
