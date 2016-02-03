@@ -1,0 +1,1 @@
+1. background-size可以来进行背景图片的裁剪

@@ -1,0 +1,4 @@
+1. input type=number的时候，输入会收到一定的限制，而此时$(input).val()或inputDom.value会存在兼容性问题；比如输入小数点，回车，空格等非数字就会将其转化为空
+解决方法：
+比如需要不过滤什么就在判断的时候加上e.keycode
+要么利用input输入事件的e.srcElement.validity.badInput的true/false判断

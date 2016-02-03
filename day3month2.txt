@@ -1,0 +1,6 @@
+1. js的JSON.stringify报Converting circular structure to JSON错误
+var a = {};
+a.hello = a;
+此时，JSON.stringify(a)就会报错，原因是进行了循环引用
+所以使用JSON.stringify(xx) == '{}'检查是否为空对象的时候千万注意
+2. 

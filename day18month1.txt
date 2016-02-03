@@ -1,0 +1,5 @@
+1. /12/.test('1234455');	即判断12在不在1234455中
+2. git log命令用g退出
+3. 删除git分支后恢复的方法：
+git log -g 查看所有提交的命令【前提是未使用git gc清除commit】
+git branch new_branch commit_id【其中，commit_id是删除的分支最近一次提交的commit】

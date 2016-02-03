@@ -1,0 +1,3 @@
+1. $(document).ready();可在页面没有完全加载完操作dom[不用等待图片等资源]
+window.onload则是必须等页面中所有资源均加载完才运行
+2. window.onload是一个方法，里面如果写方法，不会暴露的

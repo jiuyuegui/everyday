@@ -1,0 +1,16 @@
+1. a标签中的href没有的时候，写成javascript:;
+2. js在文件中的位置：head里link前，body里body后
+	 页面加载原则：顺序加载(从页面的head到body结束顺序加载。)
+	 css/img和html代码并行下载：加载的过程中发现某个css或者img时会发送请求，html继续构建，当服务器发送回数据，添加到相应的dom树位置就好了。
+	 js文件：加载js需要加载完整个js文件后，才会往下。(js代码运行时DOM不在页面中，故js文件里要加入$(document).ready(function(){})或window.onload或js文件里只有函数)
+3. -webkit-tap-highlight-color 是一个不规范属性 
+		当用户点击iOS的Safari浏览器中的链接或JavaScript的可点击的元素时，覆盖显示的高亮颜色。
+		该属性可以只设置透明度。如果未设置透明度，iOS Safari使用默认的透明度。当透明度设为0，则会禁用此属性；当透明度设为1，元素在点击时不可见。
+	exp: -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+4. js获取当前页面的域名：
+var a = window.location.host;
+var b = document.domain;
+var c = window.location.href;
+即相关信息都在location对象中
+5. 如果某个块的宽度用了px，比如一个按钮，按钮左边有一个span，span中的文本内容可变，这时候就需要讲margin-right/right定为px而非%。单位一定记得统一，否则某些情况下还是会出现问题
+6. 

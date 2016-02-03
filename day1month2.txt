@@ -1,0 +1,2 @@
+1. 输入框绑定事件blur,change,click
+2. 

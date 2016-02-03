@@ -1,0 +1,1 @@
+1. background-position: top left; 即水平方向和垂直方向

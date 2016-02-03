@@ -1,0 +1,3 @@
+1. zepto在ios中div/span之类的点击事件就不会起作用，虽然在电脑上没问题但是某些情况下，ios上是不会起作用的
+2. input type='color'，设置的时候需要设置标准样式，如#ffffff而非#fff
+3. 
