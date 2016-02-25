@@ -1,0 +1,22 @@
+1. chrome中，当font-size小于等于12px的时候，显示的字体大小均为12px。而ie和firefox中则正常显示。
+原因分析：谷歌本身bug或是设计如此
+解决方法：
+a. 直接设置浏览器配置
+	浏览器上找到设置-高级设置-网络内容-自定义字体 或者 设置-选项-高级选项-更改字体和语言设置-语言-谷歌浏览器语言(修改为英文)
+	找到以下文件C:\Documents and Settings\用户名\Local Settings\Application Data\Google\Chrome\User Data\Default\Preferences
+b. 添加CSS
+	由于谷歌使用webkit内核，通过增加以下css
+	html {
+		-webkit-text-size-adjust: none;
+	}
+	但是，该方法会导致整个页面的缩放时字体大小不会发生变化
+2. meta
+meta: 是一个HTML辅助性标签
+meta: 属性有content[定义与http-equiv或name属性相关的元信息]，http-equiv[把content的属性关联到http头部，具体有content-type/expires/refresh/set-cookie]，name[把content属性关联到一个名称，具体有author/description/keywords/generator/revised/onthers]，scheme[定义用于翻译content属性值的格式]
+meta: 正确的设置可以实现相关效果，如
+	控制页面缓存--<meta http-equiv="pragma" content="no-cache">
+	自动刷新--<meta http-equiv="Refresh" Content="时间;Url=网址参数">
+	SEO--<meta http-equiv="keywords" Content="信息参数">
+	定义页面使用语言--<meta http-equiv="Content-Type" content="text/html;charset=信息参数">
+	等等
+3. 

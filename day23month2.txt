@@ -1,0 +1,11 @@
+1. js--switch语句
+case a:
+	expression;
+	break;
+case b:
+  expression;
+  break;
+default: 
+	epression;
+即default后面不用写break
+2. 

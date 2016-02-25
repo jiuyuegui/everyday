@@ -1,0 +1,2 @@
+1. git上添加了新的分支，本地没有git pull的时候使用git branch -a是看不到新分支的
+2. 

@@ -1,0 +1,11 @@
+1. arguments.callee：引用当前正在执行的函数或调用arguments.callee的函数对象的引用，给匿名函数提供一种自我引用的方式
+eg：var func = function() {
+			alert(func === arguments.callee);
+		}
+		func();
+2. onpageshow、onload
+onpageshow事件在页面每次加载的时候都会触发，onload事件在页面从浏览器缓存中读取时不触发；故为了查看页面是直接从服务器上下载还是从缓存中读取的可使用PageTransitionEvent对象的persisted属性来判断.
+obj.addEventListener('pageshow', myFun);
+function myFun(event) {
+	alert('该页面是否从浏览器缓存中读取'+event.persisted);
+}
