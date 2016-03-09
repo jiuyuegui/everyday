@@ -1,0 +1,9 @@
+1. js异步加载实现方式
+	defer="defer": 只支持IE，规定是否对脚本进行延迟直到页面加载，若脚本不会改变文档内容可将defer属性加到script标签中
+	async="saync": 该属性规定脚本一旦使用则会异步执行，仅适用于外部脚本
+	callback: 创建script，插入到DOM中，加载完毕后callback
+2. window.location.search
+	截取当前url中?及其后面的字符串
+3. a && a.s
+当a有可能为空值的时候
+4. 

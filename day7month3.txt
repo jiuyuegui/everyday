@@ -1,0 +1,11 @@
+1. 平时设计样式方面一定要在Safari浏览器以及iphone不同版本中查看
+2. command+k 设置宽高单位
+3. position: relative/absolute/fixed/static
+relative/absolute/fixed 可根据z-index定位层
+absolute/fixed          脱离文档流
+fixed							      相对浏览器窗口定位而非body等
+absolute								相对static定位外的第一个父元素进行定位
+4. display: inline/block/none/inline-block/table/table-cell/table-row
+5. js基本数据类型
+number/string/obj/undefined/null
+6. 

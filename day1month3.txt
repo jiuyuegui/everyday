@@ -1,0 +1,37 @@
+1. polyfill --- shim
+一个shim是一个库，它将一个新的API引入一个旧环境，而且仅靠旧环境已有手段实现
+一个polyfill就是一个用在浏览器API上的shim，通常做法是先检查当前浏览器是否支持旧的API如果不支持就加载对应的polyfill，然后新旧浏览器都可以使用了
+总结：polyfill是shim的一种；shim将不同的API封装成一种，成的shim不遵循标准，而polyfill是shim遵循标准的特殊形式；polyfill专用于浏览器，shim不一定。
+2. css3弹性盒子模型box-flex
+用法一：
+		父元素： 
+			display: -moz-box;				//声明弹性盒子
+			display: -webkit-box;
+			display: box;
+		子元素1：
+			-moz-box-flex: 2;					//子元素1占两份，是子元素2的两倍
+			-webkit-box-flex: 2;
+			box-flex: 2;
+		子元素2：
+			-moz-box-flex: 1;					
+			-webkit-box-flex: 1;
+			box-flex: 1;
+用法2：
+		父元素： 
+			display: -moz-box;				//声明弹性盒子
+			display: -webkit-box;
+			display: box;
+		子元素1：
+			width: 20px;
+			margin: 0 10px;
+		子元素2：
+			-moz-box-flex: 1;					
+			-webkit-box-flex: 1;
+			box-flex: 1;
+用法3：
+		box-orient: horizontal | vertical | inline-axis | block-axis | inherit; 
+		box-direction: normal | reverse | inherit; 
+		box-align: start | end | center | baseline | stretch; //垂直方向
+		box-pack: start | end | center | justify;							//水平方向
+		box-lines: single | multiple;
+3. 

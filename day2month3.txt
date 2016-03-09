@@ -1,0 +1,21 @@
+1. ajax请求
+可以是本地资源，或者通过JSONP来实现跨域。
+或者通过支持HTTP access control的浏览器：所请求的url的header中设置
+	Access-Control-Allow-Origin: http:www.baidu.com			//允许百度请求
+	Access-Control-Allow-Origin: *											//允许所有请求
+2. zepto
+	a. 官网并不全，推荐github下载自行build选择需要的模块
+	b. click --》 tap
+	click在移动端具有200-300毫秒的延迟，而等价的tap事件则能更快的响应
+	c. zepto对css选择器的支持
+	由于jquery通过自己编写的sizzle引擎支持如:text :checkbox :first等选择器，而zepto是直接通过浏览器提供的document.querySelectorAll接口，只支持标准css选择器，但是有selector模块能支持部分的jquery选择器扩展
+	d. 元素尺寸的计算
+	如innerHeight(),outerWidth()没有,height(),width()不完善等，且display: none的元素计算出的高宽都是0而jquery中是没有问题的，因为jquery针对display: none的元素会先设置position: "absolute", visibility: "hidden", display: "block"计算完宽高后再恢复
+	e. .prop()方法的陷阱
+	如$('#text').prop('readonly', true); jquery
+	$('#text').prop('readOnly', true);   jquery/zepto
+	f. .show()的动画效果
+	如果没有fx_methods模块的.show()方法是不支持动画的，不过有了这模块后动画的支持还是有些小问题的
+	如设置了透明度，但又使用了.show(fast),动画后看到的是全黑不透明的，因为zepto实现动画没有宽高的变化而是将透明度从0渐变为1，原来设置的透明度就被代替了，这种时候可用.fadeIn()替代.show()
+3. H5<input>autocomplete属性
+4. 

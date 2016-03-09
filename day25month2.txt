@@ -9,3 +9,15 @@ obj.addEventListener('pageshow', myFun);
 function myFun(event) {
 	alert('该页面是否从浏览器缓存中读取'+event.persisted);
 }
+3. 注意对象的无限循环
+eg: var a = {a: 1, b: 2};
+	  var b = {c: 3, d: a};
+	  a.c = b;
+	  //无限循环的对象，即不能用a对象的属性值等于包含a对象的对象b
+4. js中的复制粘贴事件
+oncopy、onpaste
+eg: <body onselectstart=”return false”> 鼠标禁止选取文字
+<body oncontextmenu=”return false”>			禁止右键
+oncopy=”return false;” 									防止复制
+oncut=”return false;” 									防止剪切
+5. 有些验证，比如输入框只能输入数字，在电脑上时是没问题的，但是手机上就不一定了。手机上的输入法键盘对应的编码不一定和电脑上一致！
