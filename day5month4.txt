@@ -1,0 +1,18 @@
+1. -webkit-appearance
+webkit外观样式属性，它是一个不规范的属性，没有出现在css规范的草案中。用于改变按钮或其他控件【如input等】的外观，使其外观类似原生控件。
+Q：ios下无法正常渲染按钮
+A：ios下的Safari中有默认的按钮样式，通常我们可以在相应的元素上加上
+-webkit-appearance: none;来移除原生控件样式。
+Q：将某些元素设置成系统默认原生控件的时候
+A：如将span标签设置成各种控件的样式
+http://www.css88.com/webkit/-webkit-appearance/
+2. git merge xxx之后有大量的冲突，此时决定，以我自己本地的版本为主，少量一部分以xxx为主
+git checkout --ours assets/_reset.less	//_reset.less以自己的为主
+git checkout --theirs a.js							//a.js以xxx的为主
+这两个参数只适用于git 1.6.1以及更新的版本，在这之前可以用
+git reset -- xxx/a.java
+git checkout MERGE_HEAD -- xxx/a.java		//实现theirs
+
+git reset -- xxx/a.java
+git checkout ORIG_HEAD -- xxx/a.java		//实现ours
+3. 

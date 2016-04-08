@@ -1,0 +1,21 @@
+1. setTimeout设置在click方法中的时候，如果间隔事件太小，此时连续点击可能会造成多次触发点击事件，如洋东西中确认订单的多次重复下单bug
+2. 函数{
+	……
+	var a = {	
+		init: function(event) {	
+			console.log(event);			//undefined
+		},
+		in: function() {
+			console.log(event);			//object
+		}
+	};
+	$(function() {
+		$(document).on("click", "#hh", function(){
+		    a.init();
+		    a.in();
+		});
+	});
+
+	因为点击事件在click里，init只是点击事件调用的函数，是没有点击事件的event的，故event是参数；而in方法直接console出event则可以得到触发in方法的事件
+}
+3. 

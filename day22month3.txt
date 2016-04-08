@@ -1,0 +1,10 @@
+1. jquery设置src
+$().attr('src', xx);
+$().prop('src', xxx);
+2. 获取src
+$()[0].src
+$().prop('src')
+2. js设置背景图片
+$().css({
+	"background-image": url(xxx)
+});

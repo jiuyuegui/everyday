@@ -1,0 +1,20 @@
+1. 触屏事件
+touchstart: 当手指触摸屏幕时触发
+touchmove: 当手指在屏幕上滑动的时候连续的触发，可用preventDefault()事件阻止滚动
+touchend: 当手指从屏幕上离开的时候触发
+touchcancel: 当系统停止跟踪触摸的时候触发
+上面的事件都会冒泡也都可以取消
+2. 跟踪触摸操作
+touches: 当前跟踪的触摸操作的touch对象的数组
+targetTouches: 特定于事件目标的touch对象的数组
+changeTouches: 表示自上次触摸以来发生了什么改变的touch对象的数组
+
+每个touch对象包含的属性如下
+clientX: 触摸目标在视口中的x坐标
+clientY: 触摸目标在视口中的Y坐标
+identifier: 标识触摸的唯一ID
+pageX: 触摸目标在页面中的x坐标
+pageY: 触摸目标在页面中的y坐标
+screenX: 触摸目标在屏幕中的x坐标
+screenY: 触摸目标在屏幕中的y坐标
+target: 触摸的DOM节点目标

@@ -1,0 +1,4 @@
+1. uglify for mac cmd
+	npm install uglify-js -g
+	uglifyjs xxx.js -m -o xxx.min.js
+2. 

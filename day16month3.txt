@@ -1,0 +1,1 @@
+1. keyup/keydown中均有alert事件，当其同时出现时，keyup的alert不执行【别的操作，如改变颜色可执行】

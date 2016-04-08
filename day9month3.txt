@@ -1,1 +1,28 @@
-1. 
+1. 回调函数在大对象中，回调函数中的this指向window
+var main = {
+	init: function() {
+		……
+		var that = this;
+		lib.api.get({
+			api: 'get/name',
+			data: {}.
+			success: function(data) {
+				that.callback(data);
+			},
+			error: function() {
+			}
+		});
+	},
+	……
+	callback: function(data) {
+		var that = this;
+		……
+		$('#id').on('click', function() {
+			that.getData();					//此时that会报错，指向
+		});
+	},
+	getData: function() {
+		……
+	}
+}
+2. 

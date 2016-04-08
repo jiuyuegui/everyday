@@ -1,0 +1,3 @@
+1. 事件中若判断event的某些值不合格，则用e.preventDefault(); return;
+2. background-size: cover;  							//背景图片占满容器
+3. 

@@ -1,0 +1,2 @@
+1. bottombar.css和list.css里面的icon-up和icon-down是不一样的，所以导致了样式错乱
+2. 

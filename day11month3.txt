@@ -1,0 +1,5 @@
+1. if('') {
+		console.log(123);
+	}	//nothing
+2. juicer模板中，html标签中有url的，需要$$两个，否则url中的&将会被转义为&amp;
+3. 

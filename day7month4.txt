@@ -1,0 +1,6 @@
+1. jQuery.noConflict();	
+当有多个对象使用$的时候，该语句表示必须使用jQuery才表示jQuery对象，不再是$
+2. background-size: contain/cover;
+contain表示背景图片扩充至背景区域大小，完全覆盖；
+cover不会改变图片原有比例，扩充至背景的大小，但是有些部分可能会丢失；
+3. 

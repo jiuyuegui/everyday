@@ -1,0 +1,2 @@
+1. 若input标签初始就设置了checked，那么无论是否选中，都会返回checked，故检测的时候，最好用prop
+2. 
