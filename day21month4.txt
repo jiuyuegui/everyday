@@ -1,0 +1,159 @@
+1. h5拉起Android和iOS app，在浏览器/Android的chrome/webview不同场景中
+;
+var mobileAppInstall = (function(){
+    var ua = navigator.userAgent,
+            loadIframe,
+            win = window;
+
+    function getIntentIframe(){
+        if(!loadIframe){
+            var iframe = document.createElement("iframe");
+            iframe.style.cssText = "display:none;width:0px;height:0px;";
+            document.body.appendChild(iframe);
+            loadIframe = iframe;
+        }
+        return loadIframe;
+    }
+
+    function getChromeIntent(url){
+    // 根据自己的产品修改吧
+        return  "intent://t.qq.com/#Intent;scheme="+url+";package=com.tencent.WBlog;end";
+    }
+    var appInstall = {
+        isChrome:ua.match(/Chrome\/([\d.]+)/) || ua.match(/CriOS\/([\d.]+)/),
+        isAndroid:ua.match(/(Android);?[\s\/]+([\d.]+)?/),
+        timeout:500,
+        /**
+         * 尝试跳转appurl,如果跳转失败，进入h5url
+         * @param {Object} appurl 应用地址
+         * @param {Object} h5url  http地址
+         */
+        open:function(appurl,h5url){
+            var t = Date.now();
+            appInstall.openApp(appurl);
+            setTimeout(function(){
+                if(Date.now() - t < appInstall.timeout+100){
+                    h5url && appInstall.openH5(h5url);
+                }
+            },appInstall.timeout)
+        },
+        openApp:function(appurl){
+            if(appInstall.isChrome){
+                if(appInstall.isAndroid){
+                    win.location.href = getChromeIntent(appurl);
+                }else{
+                    win.location.href = appurl;
+                }
+            }else{
+                getIntentIframe().src = appurl;
+            }
+        },
+        openH5:function(h5url){
+            win.location.href = h5url;
+        }
+    }
+
+    return appInstall;
+})();
+2. 用koa快速启一个服务器，安装koa的时候有报错，Cache dir is required
+    $ rm -rf ~/.npm
+    $ npm cache clear
+3. react介绍【https://segmentfault.com/a/1190000003691119】
+getInitialState:    
+    组件挂载【可理解为磁盘分配内存】之前调用一次。返回值是this.state的初始值
+getDefaultProps:
+    在组件类创建的时候调用一次
+propTypes:
+    验证传入到组件的 props
+    如   Counter.PropTypes = {
+            value: PropTypes.number.isRequired,
+            onIncrement: PropTypes.func.isRequired,
+            onDecrement: PropTypes.func.isRequired
+        }       即Counter组件有三个prop,三个prop必须是number,func,func类型
+    【一般是可重用的组件需要】
+statics:
+    允许定义静态方法在组件类上调用，如
+    var MyComponent = React.createClass({
+      statics: {
+        customMethod: function(foo) {
+          return foo === 'bar';
+        }
+      },
+      render: function() {
+      }
+    });
+    MyComponent.customMethod('bar');  // true       可以在任何组件实例创建之前调用，但这些方法不能获取组件的 props 和 state。如果想在静态方法中检查 props 的值，在调用处把 props 作为参数传入到静态方法。
+   【动态方法一般是在createClass内部调用】
+displayName:
+    字符串用于输出调试信息.
+    <div>{this._descriptor.type.displayName}</div>
+
+生命周期方法
+componentWillMount: 挂载
+    渲染前调用一次，此时还没有DOM结构，可以设置State默认值
+componentDidMount: 挂载
+    render之后调用，此时DOM结构已经完善，可以初始化一些事件等；此时设置state会导致render重新渲染，但要注意setState是异步方法，故设置了state之后不会立即触发render而是等componentDidMount执行完毕state值更新之后再执行render
+componentWillReceiveProps: 更新
+    只有接收到新的props会调用此方法
+shouldComponentUpdate: 更新
+    接收到新的prop或是state时会调用此方法
+componentWillUpdate: 更新
+    初始化渲染不会调用，更新前调用
+componentDidUpdate: 更新
+    初始化渲染不会调用，更新后调用
+componentWillUnmount: 移除
+    组件移除前调用
+3. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

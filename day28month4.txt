@@ -1,0 +1,1 @@
+1. react里没有textNode，文本在最终显示的时候是被span包裹的

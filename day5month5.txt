@@ -1,0 +1,6 @@
+1. fatherDOM.inserBefore(newDOM, targetDOM);
+2. 注意获得数组是querySelectorAll
+3. css cover/contain都是等比例缩放
+cover 铺满整个显示区，部分可能不显示，没有白边
+contain 正好相反，按照某一边显示，等比例就会出现白边
+4. background-size必须和background在一起设置

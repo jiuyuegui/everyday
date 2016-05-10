@@ -1,0 +1,12 @@
+1. reflux:主要是pubsub模式[观察者模式：一个派发者给多个订阅者推送消息，某个订阅者取消了订阅，下次便不会接收到消息]
+在reflux中抽出了actions, stores, views;他们扮演者一个或多个的角色
+store  
+    在view中用listen方法 - listen(func)是store实例的listen方法;
+    自身listenTo/listenToMany一个或多个action;
+    listenTo(action1/store1, 自身的回调方法) - action1接收参数传给回调方法，如用户的行为改变view的数据时触发;
+    listenToMany(actionArr) - 回调写在自身，如初始化的时候;
+2. getClientRects获取元素占据页面的所有矩形区域,返回一个TextRectangle集合,就是TextRectangleList对象。 
+getBoundingClientRect返回一个TextRectangle对象，即使DOM里没有文本也能返回TextRectangle对象
+3. 自己的项目，npm install之前先npm init，否则。。。就会把要安装的东西装到别的目录下
+4. 
+

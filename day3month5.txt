@@ -1,0 +1,1 @@
+1. react组件没写module.exports = XXX会导致控制台报错

@@ -1,0 +1,4 @@
+1. view变化触发action，action trigger store，store监听自身的变化并将数据传给view
+2. Reflux使用的时候，用数组创建多个action的时候注意是createActions
+3. 文件中的img路径都是在编译之后的js/html/css里的路径，而其中require的jsx等则是编译前的路径，
+这样编译的时候就能找到了

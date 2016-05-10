@@ -1,0 +1,23 @@
+1. var kkk = function(a,b,c) {
+    return new promise(function(resolve, reject) {
+        if(a,b,c) {
+        setTimeout(() => {
+            resolve(data)
+        }, 1000);
+        }
+        }
+        if(...) {
+            return reject(false);
+        }
+    });
+}
+
+var data, flat
+kkk(a,b,c).then(resData => {
+    data = resdata
+},  resFlag => {
+    
+}).then(() => {
+        
+})
+2. 

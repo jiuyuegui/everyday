@@ -1,0 +1,5 @@
+1. 非法请求 一般是域名没有配置好，接口只识别waptest.taobao.com、wapa.taobao.com、m.taobao.com
+2. mt发布的一般是静态页面，awp上面发布的是应用的页面
+3. gulp-px3rem 
+    参数baseDpr: 2;   表示编译后以px为单位的会变成原来的1/2
+    参数remUnit: 75;  默认75，表示1rem = 75px

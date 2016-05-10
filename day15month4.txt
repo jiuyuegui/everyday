@@ -1,0 +1,28 @@
+1. Symbol -- 符号，es6新语法，一种新的数据类型
+符号是一种特殊的，不可变的数据类型，可以作为对象属性的标示符
+
+语法：Symbol([description]); description可选的，字符串。
+字符的描述用于调试而非访问符号本身
+var smy1 = Symbol();
+var smy2 = Symbol('foo');
+var smy3 = Symbol('foo');
+sym2 == sym3  //false
+即Symbol('foo')不会强制'foo'成为一个新符号，它每次都创建一个新的符号
+
+符号对象是一个符号 原始数据类型的隐式对象包装器
+var sym = new Symbol();   //抛出错误
+
+2. 埋点之spm[super position model超级位置模型] 用来跟踪页面模块位置，标准编码采用a.b.c.d模式
+a: 站点ID —— 包含特定业务的一类页面的集合(通过<meta name="data-spm" content="a216z">)
+b: 页面ID —— 某一特定业务下的某一具体页面(通过<body data-spm="7124399" >)
+c: 区域或模块ID —— 某一页面上的具体区域(对应元素上添加data-spm)
+d: 位置ID —— 某一具体区域上的具体模块(链接或图片等，最小粒度，这部分data-spm后端渲染会自动加上去)
+
+如女装站点 -> 某一女装页面 -> 左侧导航栏 -> 一个链接a.html，此链接出去的所有页面后面都应该携带spm=xx.xx.xx.xx这样的参数串（即出去的时候带上自己的位置信息），通过该信息我们可以定位到一个URL是由全网中哪个具体位置生成的
+
+spm参数主要通过产品经理申请，区块以下可自己去定@子之
+
+h5页面中的a链接，系统将会自动添加spm到
+data-spm-anchor-id属性中，同时也会在链接中添加spm参数，注意，通过location方式跳转如需要埋点，则手动添加上去
+
+3. 埋点之scm[super content model]

@@ -1,0 +1,2 @@
+1. amd 提前加载，cmd 按需加载 - as lazy as possible
+2. 
