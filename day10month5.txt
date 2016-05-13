@@ -1,4 +1,6 @@
 1. css clear
  父元素-子元素【float】，导致子元素超出，父元素无法包裹子元素 --》父元素overflow: hidden;让父元素形成盒模型
  父元素-子元素1【float】,子元素2，导致子元素2被影响 --》子元素1的闭合标签之后添加空的标签，给其设置clear即可
-2. 
+2. react的挂载相关组件componentWillMount、componentDidMount重复渲染也只执行一次，除非卸载组件重新渲染
+  【http://www.cnblogs.com/vajoy/p/4603355.html】
+3. 
