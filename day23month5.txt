@@ -1,0 +1,7 @@
+1. 使得height: 100%起作用
+  需要设置父元素的height:100%，再设置body的height:100%，再设置html的height:100%
+2. 设置圆形背景的图片
+  在img外包一层div，给div设置border-radius:50%以及width=height=xx，给img设置width=height=xx-4[偶数]以及margin-top:2,margin-left:2以及border-radius:50%以及overflow:hidden
+3. min-width的overflow: scroll;不起作用
+  min-width + height[确定的] + 父元素width【确定的】
+4. 

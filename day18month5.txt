@@ -1,0 +1,4 @@
+1. tms搭建 -- 按照文档上的命令行安装，新建项目操作，要登录tms，提交的时候要登录def[ def tms ff -d ]
+2. def tms schema -f同步schema的数据，但记住是在某个module目录下的
+3. def light tms在根目录执行，之后可以预览、同步、发布等【预览也可以直接命令行def tms dev】
+4. 展示类的不需要js交互，index.js文件基本不需要写东西

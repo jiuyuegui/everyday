@@ -1,0 +1,2 @@
+1. Object.keys(obj);
+Object.getOwnPropertyName(obj);
