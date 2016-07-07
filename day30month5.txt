@@ -1,0 +1,2 @@
+1. addEventListener <==> removeEventListener
+使用的时候需注意，removeEventListener('click', handler, false);其中handler必须和addEventListener的方法是同一个

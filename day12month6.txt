@@ -1,0 +1,1 @@
+1. 本地开发时遇到类似证书异常的错误就在chrome://net-internals/#hsts里的delete domain下把浏览器里内置的hsts规则【域名】删掉

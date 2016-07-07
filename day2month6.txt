@@ -1,0 +1,1 @@
+1. 最近访问自己本地的项目变得很慢，本来以为是http://wireless.taobao.net/tbdns/index绑定的原因，不过删掉之后还是那样

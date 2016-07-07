@@ -1,0 +1,2 @@
+1. 发布静态资源到cdn【http://gitlab.alibaba-inc.com/mtb/doc/wikis/mobile-workflow】
+  注意： 本地master不要修改或者push到线上，只能pull最新的，因为发布daily或者publish的时候会自动merge到master去

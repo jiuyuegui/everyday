@@ -1,0 +1,31 @@
+1. webpack使用
+    externals：配置后允许我们不处理某些依赖的库，但是依旧可以通过CMD、AMD或者window/global全局的方式访问，如
+    module.exports = {
+        ...
+        output: {
+       		...,
+       		libraryTarget: "umd"
+        },
+        externals: {
+        	jquery: "jQuery"
+        }
+    }
+    library和libraryTarget使用场景
+    library -- 如果设置，则暴露bundle为一个库，library就是其名称；若你想写一个库并且发布它作为单个的文件
+	libraryTarget   -- 值有多个，var/this/commonjs/commonjs2/amd/umd，默认是var，含义
+		"var"       -- Export by setting a variable: var Library = xxx (default)
+		"this"      -- Export by setting a property of this: this["Library"] = xxx
+		"commonjs"  -- Export by setting a property of exports: exports["Library"] = xxx
+		"commonjs2" -- Export by setting module.exports: module.exports = xxx
+		"amd"       -- Export to AMD (optionally named - set the name via the library option)
+		"umd"       -- Export to AMD, CommonJS2 or as property in root
+    
+    Webpack中的module.noParse
+        作用是忽略对已知文件的解析，很有用的配置项；
+        如果你确定一个模块中没有其他新的依赖，webpack将不再扫描这个文件中的依赖；
+
+2. es6 class 
+   在子类的构造器中可以使用 super 关键字调用父类的构造器。
+   super 关键字可以用来调用其父类的构造器或者类方法
+
+

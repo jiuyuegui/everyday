@@ -1,0 +1,4 @@
+1. Git: Uptream is Gone --》 上游丢失
+clone一个空项目的时候，通常默认是master，此时本地切换到新的分支，新的分支添加了内容，commit之后再切回master分支的时候，master分支会提示未创建，此时git checkout -b master，git会提示Uptream is Gone。因为线上的master内容是空的，而本地的master却是有内容的。
+2. new Date().getFullYear()				//获取年份与1900的差值，如110
+   new Date().getYear()					//获取完整的年份，如2015

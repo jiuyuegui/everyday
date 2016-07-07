@@ -1,0 +1,88 @@
+1. http是无状态的协议，所以识别客户端需要接住session、cookie才能和客户端保持对话；websocket可以解决这个问题
+2. websocket主要作用是：允许服务器和客户端进行全双工通信，可同时向对方发送数据，它们之间存在一条持续打开的通道
+3. websocket协议完全可取代ajax，用来向服务端发送文本和二进制数据，而且还没有跨域问题
+4. http 1.1 协议规定，Upgrade头信息表示将通信协议从http/1.1转向该项所指定的协议
+5. 浏览器向服务器发送websocket请求的时候会带上密钥【随机生成】、host、origin，服务器将密钥加密后返回以证明是目标服务器并且返回通信的websocket网址
+6. websocket协议用ws表示；此外，还有wss，表示加密的websocket协议，对应https协议
+7. 完成握手之后，websocket就在tcp协议之上开始传送数据
+8. 浏览器端对websocket的处理总结下来就三件事：
+	---建立连接和断开连接
+	---发送数据和接收数据
+	---处理错误
+9. 检查浏览器是否支持websocket可以看window.websocket == undefined是否为真
+10. if(window.WebSocket != undefined) {
+		var connection = new WebSocket('ws://localhost:1740');	
+		//假定服务器是本地1740端口，需要使用ws协议
+	}
+	建立连接后connection有一个readyState属性：
+	正在连接 -- 0，
+	连接成功 -- 1，
+	正在关闭 -- 2，
+	连接关闭 -- 3
+
+	1的状态下触发open事件，这时就可以向服务器发送数据了，还可以指定回调函数
+	connection.onopen = kkk;
+	function kkk() {……}
+
+	3的状态会触发close事件
+	connection.onclose = ppp;
+	function ppp() {……}
+
+	连接建立后，通过send方法向服务端发送数据
+	connection.send(message);
+	除了字符串，也可以使用Blob和ArrayBuffer对象发送二进制数据
+
+	客户端收到服务端返回的数据会触发message事件，此时可通过回调函数处理服务器返回的数据
+	connection.onmessage = mmm;
+	function mmm(event) {...event.data...}
+	如果接收的是二进制数据，需要将连接对象的格式设置为blob或arraybuffer，即
+	connection.binaryType = 'arraybuffer';
+	connection.onmessage = function(e) {
+	  console.log(e.data.byteLength);     // ArrayBuffer对象有byteLength属性
+	};
+
+	处理错误
+	connection.onerror = error;
+	function error(event) {
+		console.log('error'+event.data);
+	}
+11. es6 let 写法
+    let [a, b] = [c, d];  对应给a,b赋值为c,d 常用在数组复制
+12. 一个bug是在某些andriod手机里，placeholder不能自动换行，会超出去
+    解法：https://segmentfault.com/q/1010000002677808
+13. object instanceof constructor.prototype是用来检测constructor.prototype是否存在于object的原型链上
+14. hasOwnProperty对自身拥有属性返回TRUE，反之返回FALSE
+15. <form>
+		<input type="text" name="xxx" value="123" />
+		<input type="text" name="kkk" value="345" />
+    </form>
+    在js中可以通过此种方式获取input的value
+    var f = document.forms[0];			//获得form节点
+    var i1 = f['xxx'].value;			//123
+    var i2 = f['kkk'].value;			//345
+16. 控制台输出有颜色的消息        console.log(`%c下行消息，protocalData为:` + 12, `color: #f40;`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

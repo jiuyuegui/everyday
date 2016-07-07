@@ -1,0 +1,5 @@
+1. let arr = oldArr.slice();	浅复制数组的一部分存入一个新的数组对象中并返回这个数组
+2. webkit内核中，当css3动画结束会触发webkitTransitionEnd事件
+   在CSS 3中，可以通过使用keyframe样式属性与animation样式属性实现animation动画，使用transition样式属性实现transition动画。
+   在WebKit引擎的浏览器（包括Chrome浏览器与Safari浏览器）中，存在与这两种动画功能相关的webkitAnimationEnd事件与webkitTransitionEnd事件
+3. 

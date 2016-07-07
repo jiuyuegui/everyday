@@ -1,0 +1,1 @@
+1. 斑马系统的资源都是上传cdn的，因此，和之前的习惯一样，先ssh方式clone下来到本地，然后做些修改push到master，再push到daily/4.0.0[注意此处是从4.0.0开始的版本]，再push tag publish/4.0.0就可以发到线上

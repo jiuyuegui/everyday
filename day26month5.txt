@@ -1,0 +1,5 @@
+1. a标签中打开一个新页面，target="_blank"
+2. js 原生dom 设置高度
+  dom.style.width = '100px';
+  而dom的setAttribute是添加属性的，并非样式！！！
+3. dom.addEventListener(event, function, false);
